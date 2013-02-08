@@ -1,0 +1,365 @@
+// Bootmoda
+// Swatch: 
+// Version: 2.3.1
+// -----------------------------------------------------
+
+// TYPOGRAPHY
+// -----------------------------------------------------
+h5 { font-size: @baseFontSize * 1.25; }
+
+// SCAFFOLDING
+// -----------------------------------------------------
+
+// NAVBAR
+// -----------------------------------------------------
+
+// NAV
+// -----------------------------------------------------
+.nav-list>li>a {
+	padding: 3px 30px;
+}
+
+// BUTTONS
+// -----------------------------------------------------
+.btn-group>.btn-mini {
+	font-size: @baseFontSize
+}
+
+// TABLES
+// -----------------------------------------------------
+
+//
+// Tables
+// --------------------------------------------------
+
+
+// BASE TABLES
+// -----------------
+
+.g-table {
+  max-width: 100%;
+  background-color: @tableBackground;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.g-table text {
+    font-family: @sansFontFamily;
+    font-size: @baseFontSize;
+    fill: @textColor;
+}
+
+// BASELINE STYLES
+// ---------------
+
+.g-table {
+  width: 100%;
+  margin-bottom: @baseLineHeight;
+  // Cells
+  .g-th,
+  .g-td {
+    padding: 8px;
+    line-height: @baseLineHeight;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid @tableBorder;
+    position: relative;
+    float: left;
+  }
+  .g-th {
+    font-weight: bold;
+  }
+  // Bottom align for column headings
+  .g-thead .g-th {
+    vertical-align: bottom;
+  }
+  // Remove top border from thead by default
+  caption + .g-thead .g-tr:first-child .g-th,
+  caption + .g-thead .g-tr:first-child .g-td,
+  colgroup + .g-thead .g-tr:first-child .g-th,
+  colgroup + .g-thead .g-tr:first-child .g-td,
+  .g-thead:first-child .g-tr:first-child .g-th,
+  .g-thead:first-child .g-tr:first-child .g-td {
+    border-top: 0;
+  }
+  // Account for multiple tbody instances
+  .g-tbody + .g-tbody {
+    border-top: 2px solid @tableBorder;
+  }
+}
+
+
+
+// CONDENSED TABLE W/ HALF PADDING
+// -------------------------------
+
+.g-table-condensed {
+  .g-th,
+  .g-td {
+    padding: 4px 5px;
+  }
+}
+
+
+// BORDERED VERSION
+// ----------------
+
+.g-table-bordered {
+  border: 1px solid @tableBorder;
+  border-collapse: separate; // Done so we can round those corners!
+  *border-collapse: collapse; // IE7 can't round corners anyway
+  border-left: 0;
+  .border-radius(4px);
+  .g-th,
+  .g-td {
+    border-left: 1px solid @tableBorder;
+  }
+  // Prevent a double border
+  caption + .g-thead .g-tr:first-child .g-th,
+  caption + .g-tbody .g-tr:first-child .g-th,
+  caption + .g-tbody .g-tr:first-child .g-td,
+  colgroup + .g-thead .g-tr:first-child .g-th,
+  colgroup + .g-tbody .g-tr:first-child .g-th,
+  colgroup + .g-tbody .g-tr:first-child .g-td,
+  .g-thead:first-child .g-tr:first-child .g-th,
+  .g-tbody:first-child .g-tr:first-child .g-th,
+  .g-tbody:first-child .g-tr:first-child .g-td {
+    border-top: 0;
+  }
+  // For first th or td in the first row in the first thead or tbody
+  .g-thead:first-child .g-tr:first-child .g-th:first-child,
+  .g-tbody:first-child .g-tr:first-child .g-td:first-child {
+    -webkit-border-top-left-radius: 4px;
+            border-top-left-radius: 4px;
+        -moz-border-radius-topleft: 4px;
+  }
+  .g-thead:first-child .g-tr:first-child .g-th:last-child,
+  .g-tbody:first-child .g-tr:first-child .g-td:last-child {
+    -webkit-border-top-right-radius: 4px;
+            border-top-right-radius: 4px;
+        -moz-border-radius-topright: 4px;
+  }
+  // For first th or td in the first row in the first thead or tbody
+  .g-thead:last-child .g-tr:last-child .g-th:first-child,
+  .g-tbody:last-child .g-tr:last-child .g-td:first-child,
+  .g-tfoot:last-child .g-tr:last-child .g-td:first-child {
+    .border-radius(0 0 0 4px);
+    -webkit-border-bottom-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        -moz-border-radius-bottomleft: 4px;
+  }
+  .g-thead:last-child .g-tr:last-child .g-th:last-child,
+  .g-tbody:last-child .g-tr:last-child .g-td:last-child,
+  .g-tfoot:last-child .g-tr:last-child .g-td:last-child {
+    -webkit-border-bottom-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        -moz-border-radius-bottomright: 4px;
+  }
+
+  // Special fixes to round the left border on the first td/th
+  caption + .g-thead .g-tr:first-child .g-th:first-child,
+  caption + .g-tbody .g-tr:first-child .g-td:first-child,
+  colgroup + .g-thead .g-tr:first-child .g-th:first-child,
+  colgroup + .g-tbody .g-tr:first-child .g-td:first-child {
+    -webkit-border-top-left-radius: 4px;
+            border-top-left-radius: 4px;
+        -moz-border-radius-topleft: 4px;
+  }
+  caption + .g-thead .g-tr:first-child .g-th:last-child,
+  caption + .g-tbody .g-tr:first-child .g-td:last-child,
+  colgroup + .g-thead .g-tr:first-child .g-th:last-child,
+  colgroup + .g-tbody .g-tr:first-child .g-td:last-child {
+    -webkit-border-top-right-radius: 4px;
+            border-top-right-radius: 4px;
+         -moz-border-radius-topleft: 4px;
+  }
+
+}
+
+// ZEBRA-STRIPING
+// --------------
+
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+.g-table-striped {
+  .g-tbody {
+    .g-tr:nth-child(odd) .g-background {
+      fill: @tableBackgroundAccent;
+    }
+  }
+}
+
+// HOVER EFFECT
+// ------------
+// Placed here since it has to come after the potential zebra striping
+.g-table-hover {
+  .g-tbody {
+    .g-tr:hover .g-background {
+      fill: @tableBackgroundHover;
+    }
+  }
+}
+
+.g-table-hover {
+  .g-tbody {
+    .g-tr .g-background:hover {
+      fill: @tableBackgroundHover;
+    }
+  }
+}
+
+
+// TABLE CELL SIZING
+// -----------------
+
+// Reset default grid behavior
+.g-table [class*=span],
+.row-fluid .g-table [class*=span] {
+  display: table-cell;
+  float: none; // undo default grid column styles
+  margin-left: 0; // undo default grid column styles
+}
+
+// Change the column widths to account for td/th padding
+.g-table {
+  .span1     { .tableColumns(1); }
+  .span2     { .tableColumns(2); }
+  .span3     { .tableColumns(3); }
+  .span4     { .tableColumns(4); }
+  .span5     { .tableColumns(5); }
+  .span6     { .tableColumns(6); }
+  .span7     { .tableColumns(7); }
+  .span8     { .tableColumns(8); }
+  .span9     { .tableColumns(9); }
+  .span10    { .tableColumns(10); }
+  .span11    { .tableColumns(11); }
+  .span12    { .tableColumns(12); }
+  .span13    { .tableColumns(13); }
+  .span14    { .tableColumns(14); }
+  .span15    { .tableColumns(15); }
+  .span16    { .tableColumns(16); }
+  .span17    { .tableColumns(17); }
+  .span18    { .tableColumns(18); }
+  .span19    { .tableColumns(19); }
+  .span20    { .tableColumns(20); }
+  .span21    { .tableColumns(21); }
+  .span22    { .tableColumns(22); }
+  .span23    { .tableColumns(23); }
+  .span24    { .tableColumns(24); }
+}
+
+
+
+// TABLE BACKGROUNDS
+// -----------------
+// Exact selectors below required to override .table-striped
+
+.g-table .g-tbody .g-tr .g-background {
+  fill: none;
+  pointer-events: all;
+}
+
+.g-table .g-tbody .g-tr {
+  &.success .g-background {
+    fill: @successBackground;
+  }
+  &.error .g-background {
+    fill: @errorBackground;
+  }
+  &.warning .g-background {
+    fill: @warningBackground;
+  }
+  &.info .g-background {
+    fill: @infoBackground;
+  }
+}
+
+// Hover states for .table-hover
+.g-table-hover .g-tbody .g-tr {
+  &.success:hover .g-background {
+    fill: darken(@successBackground, 5%);
+  }
+  &.error:hover .g-background {
+    fill: darken(@errorBackground, 5%);
+  }
+  &.warning:hover .g-background {
+    fill: darken(@warningBackground, 5%);
+  }
+  &.info:hover .g-background {
+    fill: darken(@infoBackground, 5%);
+  }
+}
+
+.g-compare {
+  stroke:orange;
+  stroke-dasharray:2, 2;
+}
+
+.g-row-border {
+  stroke: @tableBorder;
+  stroke-width: 1;
+}
+
+.g-table-bordered .g-column-border{
+  stroke: @tableBorder;
+  stroke-width: 1;  
+}
+
+.g-tbody-container {
+  float: left;
+  position: relative;
+}
+
+.g-tbody-container-overflow {
+  overflow-y: scroll;
+}
+
+.g-axis path,
+.g-axis line {
+    fill: none;
+    stroke: @textColor;
+    //shape-rendering: crispedges;
+}
+
+.g-axis text {
+    font-family: @sansFontFamily;
+    font-size: @baseFontSize;
+    fill: @textColor;
+}
+
+.g-tfoot-container {
+  //margin-top: 2px;
+}
+
+.g-tfoot-container svg {
+  display: inline;
+  margin-top: 5px;
+}
+
+// TABLE SORTING
+.g-table .g-thead .g-sortable.g-ascending {
+    background: url("/css/images/sort_ascending.png") no-repeat scroll right center transparent;
+}
+
+.g-table .g-thead .g-sortable.g-descending {
+    background: url("/css/images/sort_descending.png") no-repeat scroll right center transparent;
+}
+
+.g-table .g-thead .g-sortable {
+    background: url("/css/images/sort.png") no-repeat scroll right center transparent;
+}
+
+
+// FORMS
+// -----------------------------------------------------
+
+// DROPDOWNS
+// -----------------------------------------------------
+
+// ALERTS, LABELS, BADGES
+// -----------------------------------------------------
+
+// MISC
+// -----------------------------------------------------
+
+// MEDIA QUERIES
+// -----------------------------------------------------

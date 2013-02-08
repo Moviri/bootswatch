@@ -10,6 +10,12 @@ bootswatch:
 	recess --compile swatchmaker-responsive.less > ${OUTPUT_PATH}/bootstrap-responsive.css
 	recess --compress swatchmaker-responsive.less > ${OUTPUT_PATH}/bootstrap-responsive.min.css
 
+bootmoda:
+	recess --compile  modamaker.less > moda/bootstrap.css
+	recess --compress  modamaker.less > moda/bootstrap.min.css
+	recess --compile modamaker-responsive.less > moda/bootstrap-responsive.css
+	recess --compress  modamaker-responsive.less > moda/bootstrap-responsive.min.css
+
 bootstrap:
 	-test -d bootstrap && rm -r bootstrap
 	curl --location -o latest_bootstrap.tar.gz https://github.com/twitter/bootstrap/tarball/master
