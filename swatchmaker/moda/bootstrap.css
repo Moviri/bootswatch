@@ -5956,6 +5956,10 @@ h5 {
   background: url("/css/images/sort.png") no-repeat scroll right center transparent;
 }
 
+.modal-backdrop {
+  background-color: #ffffff;
+}
+
 .g-table {
   max-width: 100%;
   background-color: transparent;
