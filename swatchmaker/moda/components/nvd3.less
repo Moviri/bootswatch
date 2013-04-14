@@ -1,0 +1,52 @@
+//
+// NVD3 chart classes
+// --------------------------------------------------
+
+div.recline-graph {
+	min-height: 250px;
+}
+
+svg.bstrap {
+	font-family: @baseFontFamily !important;
+	font-size: @baseFontSize;
+}
+
+svg.bstrap text {
+  font-weight: normal;
+  font-size: 14px;
+  font-family: @baseFontFamily !important;
+  fill: @textColor;
+}
+
+svg.bstrap .title {
+  font-weight: normal;
+  font-size: 14px;
+  font-family: @headingsFontFamily !important;
+}
+
+div.recline-graph div.nvtooltip {
+  background-color: @white;
+  border: 1px solid @grayLight2;
+  // font-family: @serifFontFamily;
+  fill: @textColor;
+  stroke: @linkColor;
+}
+
+div.recline-graph div.nvtooltip h3 {
+  font-size: 22px;
+}
+
+div.recline-graph div.nvtooltip p {
+  font-family: @baseFontFamily;
+  font-size: 18px;
+}
+
+div.recline-graph .nvd3 .nv-axis line {
+	stroke: fadeout(@textColor,33%);
+}
+
+div.recline-graph .nvd3 .nv-axis path {
+	stroke: @textColor;
+}
+
+
