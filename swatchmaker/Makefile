@@ -13,8 +13,11 @@ bootswatch:
 bootmoda:
 	recess --compile  modamaker.less > moda/bootstrap.css
 	recess --compress  modamaker.less > moda/bootstrap.min.css
-	recess --compile modamaker-responsive.less > moda/bootstrap-responsive.css
-	recess --compress  modamaker-responsive.less > moda/bootstrap-responsive.min.css
+#	recess --compile modamaker-responsive.less > moda/bootstrap-responsive.css
+#	recess --compress  modamaker-responsive.less > moda/bootstrap-responsive.min.css
+	recess --compile  modamaker.extensions.less > moda/bootstrap.extensions.css
+	recess --compress  modamaker.extensions.less > moda/bootstrap.extensions.min.css
+
 
 bootstrap:
 	-test -d bootstrap && rm -r bootstrap
