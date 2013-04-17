@@ -118,7 +118,16 @@ div.s-table {
   div.s-tbody + div.s-tbody {
     border-top: 2px solid @tableBorder;
   }
+  // Ensure slickgrid columns can word wrap long headers
+  div.s-th.slick-header-column.ui-state-default {
+    height: auto;
+  }
+  .slick-header-columns .slick-column-name {
+    white-space: normal;
+  }  
 }
+
+
 
 
 

@@ -906,6 +906,14 @@ div.s-table {
   border-top: 2px solid #dddddd;
 }
 
+.s-table div.s-th.slick-header-column.ui-state-default {
+  height: auto;
+}
+
+.s-table .slick-header-columns .slick-column-name {
+  white-space: normal;
+}
+
 .s-table-condensed div.s-th,
 .s-table-condensed div.s-td {
   padding: 4px;
