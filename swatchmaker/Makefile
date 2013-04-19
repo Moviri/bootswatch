@@ -18,6 +18,11 @@ bootmoda:
 	recess --compile  modamaker.extensions.less > moda/bootstrap.extensions.css
 	recess --compress  modamaker.extensions.less > moda/bootstrap.extensions.min.css
 
+bootcwdemo:
+	recess --compile  cwdemomaker.less > cwdemo/bootstrap.css
+	recess --compress  cwdemomaker.less > cwdemo/bootstrap.min.css
+	recess --compile cwdemomaker-responsive.less > cwdemo/bootstrap-responsive.css
+	recess --compress  cwdemomaker-responsive.less > cwdemo/bootstrap-responsive.min.css
 
 bootstrap:
 	-test -d bootstrap && rm -r bootstrap
